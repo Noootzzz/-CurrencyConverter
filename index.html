@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="front/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form action="">
+        
+        <label for="montant"> from:
+            <div>
+                <select name="from" id="from">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="GBP">GBP</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CNY">CNY</option>
+                    <option value="SEK">SEK</option>
+                    <option value="NZD">NZD</option>
+                </select>
+                <input type="text" name="montant" id="montant" placeholder="Valeur">
+            </div>
+        </label>
+        <label for="résultat"> to:
+            <div class="resultat">
+                <select name="to" id="to">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="GBP">GBP</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CNY">CNY</option>
+                    <option value="SEK">SEK</option>
+                    <option value="NZD">NZD</option>
+                </select>
+                <p id="resultat" class="total">0</p>
+            </div>
+        </label>
+    </form>
+</body>
+</html>

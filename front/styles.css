@@ -1,0 +1,68 @@
+@keyframes shrinkPlaceholder {
+    from {
+        font-size: 100%;
+    }
+    to {
+        font-size: 0%;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    margin-top: 30px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    height: 70vh;
+    margin-right: 15vw;
+    margin-left: 15vw;
+    margin-top: 50px;
+    background-color: rgb(164, 164, 164) ;
+    padding: 25px;
+    border-radius: 100px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+div{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 20vh;
+    border-radius: 50px;
+}
+.resultat{
+    display: flex;
+    justify-content: flex-start;
+    width: 30vw;
+}
+select{
+    font-size: 200%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+}
+input{
+    font-size: 180%;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+input:focus::placeholder {
+    animation: shrinkPlaceholder 1s forwards;
+}
+.total{
+    font-size: 180%;
+}
