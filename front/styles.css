@@ -7,41 +7,56 @@
     }
 }
 
-*{
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('../font/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Glacial Indifference', sans-serif;
 }
+
 h1{
     text-align: center;
     margin-top: 30px;
+    font-size: 800%;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70vw;
-    height: 70vh;
-    margin-right: 15vw;
-    margin-left: 15vw;
-    margin-top: 50px;
-    background-color: rgb(164, 164, 164) ;
+    max-width: 50vw;
+    max-height: 70vh;
+    margin: 50px auto; 
+    background-color: #E4EED2;
     padding: 25px;
     border-radius: 100px;
 }
+
 label{
     display: flex;
     flex-direction: column;
     width: 30vw;
+    margin: 80px;
+    font-size: larger;
+
 }
-div{
+
+.menu{
     display: flex;
     align-items: center;
     background-color: white;
     height: 20vh;
     border-radius: 50px;
 }
+
 .resultat{
     display: flex;
     justify-content: flex-start;
@@ -65,4 +80,80 @@ input:focus::placeholder {
 }
 .total{
     font-size: 180%;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    border: 2px solid #acda57;
+    border-radius: 5px;
+    background-color: #E4EED2;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+}
+
+select:hover, select:focus {
+    border-color: #888;
+}
+
+select:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+#from-flag, #to-flag {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+
+#fleche{
+    cursor: pointer;
+    font-size: 60px;
+}
+
+#fleche:hover{
+    color: #acda57;
+    transition: all 0.3s;
+}
+
+.arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+.multiplicateur {
+    font-size: 40px;
+    background-color: #ffffff;
+    border: none;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+
+/*A MODIFIER*/
+.date-container {
+    position: absolute;
+    top: 270px;
+    right: 1575px;
+    font-size: 24px;
+    color: #333;
 }

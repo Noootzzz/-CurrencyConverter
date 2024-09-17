@@ -4,46 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="front/styles.css">
-    <title>Document</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <title>Currency Converter</title>
 </head>
 <body>
     <h1>Currency Converter</h1>
+    <div class="date-container" id="current-date"></div>    <!--A modifier dans le css-->
     <form action="">
-        
-        <label for="montant"> from:
-            <div>
+        <label for="montant"> 
+            <div class="menu">
+                <span id="from-flag" class="flag-icon flag-icon-us drapeaux"></span> 
                 <select name="from" id="from">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="JPY">JPY</option>
-                    <option value="GBP">GBP</option>
-                    <option value="CAD">CAD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="CHF">CHF</option>
-                    <option value="CNY">CNY</option>
-                    <option value="SEK">SEK</option>
-                    <option value="NZD">NZD</option>
+                    <option value="USD" data-flag="us">USD</option>
+                    <option value="EUR" data-flag="eu">EUR</option>
+                    <option value="JPY" data-flag="jp">JPY</option>
+                    <option value="GBP" data-flag="gb">GBP</option>
+                    <option value="CAD" data-flag="ca">CAD</option>     <!--A voir comment ça ce passe avec l'api ici-->
+                    <option value="AUD" data-flag="au">AUD</option>
+                    <option value="CHF" data-flag="ch">CHF</option>
+                    <option value="CNY" data-flag="cn">CNY</option>
+                    <option value="SEK" data-flag="se">SEK</option>
+                    <option value="NZD" data-flag="nz">NZD</option>
                 </select>
-                <input type="text" name="montant" id="montant" placeholder="Valeur">
+                <div class="midle">
+                    <input type="text" name="montant" id="montant" placeholder="Valeur">
+                </div>
             </div>
         </label>
-        <label for="résultat"> to:
-            <div class="resultat">
+        <div class="arrow-container">
+            <i id="fleche" class="fas fa-arrows-alt-v"></i>
+            <h2 class="multiplicateur"> x 0.9877</h2>       <!--A voir comment ça ce passe avec l'api ici-->
+        </div>
+        <label for="résultat"> 
+            <div class="resultat menu">
+                <span id="to-flag" class="flag-icon flag-icon-us drapeaux"></span> 
                 <select name="to" id="to">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="JPY">JPY</option>
-                    <option value="GBP">GBP</option>
-                    <option value="CAD">CAD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="CHF">CHF</option>
-                    <option value="CNY">CNY</option>
-                    <option value="SEK">SEK</option>
-                    <option value="NZD">NZD</option>
+                    <option value="USD" data-flag="us">USD</option>
+                    <option value="EUR" data-flag="eu">EUR</option>
+                    <option value="JPY" data-flag="jp">JPY</option>
+                    <option value="GBP" data-flag="gb">GBP</option>
+                    <option value="CAD" data-flag="ca">CAD</option>     <!--A voir comment ça ce passe avec l'api ici-->
+                    <option value="AUD" data-flag="au">AUD</option>
+                    <option value="CHF" data-flag="ch">CHF</option>
+                    <option value="CNY" data-flag="cn">CNY</option>
+                    <option value="SEK" data-flag="se">SEK</option>
+                    <option value="NZD" data-flag="nz">NZD</option>
                 </select>
                 <p id="resultat" class="total">0</p>
             </div>
         </label>
     </form>
+    <script src="front/app.js"></script>
 </body>
 </html>
