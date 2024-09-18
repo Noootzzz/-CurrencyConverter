@@ -46,6 +46,13 @@ convertedCurrencySelect.addEventListener('change', updateExchangeRateURL)
 
 const inputCurrencyValue = document.querySelector('#montant')
 const outputCurrencyValue = document.querySelector('#resultat')
+const updateArrow = document.querySelector('#fleche')
+
+updateArrow.addEventListener('click',() => {
+
+    updateExchangeRateURL()
+    convertCurrency()
+})
 
 function convertCurrency() {
     outputCurrencyValue.textContent = inputCurrencyValue.value * exchangeRateValue
