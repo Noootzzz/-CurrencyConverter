@@ -17,16 +17,6 @@
             <div class="menu">
                 <span id="from-flag" class="flag-icon flag-icon-us drapeaux"></span> 
                 <select name="from" id="from">
-                    <option value="USD" data-flag="us">USD</option>
-                    <option value="EUR" data-flag="eu">EUR</option>
-                    <option value="JPY" data-flag="jp">JPY</option>
-                    <option value="GBP" data-flag="gb">GBP</option>
-                    <option value="CAD" data-flag="ca">CAD</option>     <!--A voir comment ça ce passe avec l'api ici-->
-                    <option value="AUD" data-flag="au">AUD</option>
-                    <option value="CHF" data-flag="ch">CHF</option>
-                    <option value="CNY" data-flag="cn">CNY</option>
-                    <option value="SEK" data-flag="se">SEK</option>
-                    <option value="NZD" data-flag="nz">NZD</option>
                 </select>
                 <div class="midle">
                     <input type="text" name="montant" id="montant" placeholder="Value">
@@ -41,21 +31,12 @@
             <div class="menu">
                 <span id="to-flag" class="flag-icon flag-icon-us drapeaux"></span> 
                 <select name="to" id="to">
-                    <option value="USD" data-flag="us">USD</option>
-                    <option value="EUR" data-flag="eu">EUR</option>
-                    <option value="JPY" data-flag="jp">JPY</option>
-                    <option value="GBP" data-flag="gb">GBP</option>
-                    <option value="CAD" data-flag="ca">CAD</option>     <!--A voir comment ça ce passe avec l'api ici-->
-                    <option value="AUD" data-flag="au">AUD</option>
-                    <option value="CHF" data-flag="ch">CHF</option>
-                    <option value="CNY" data-flag="cn">CNY</option>
-                    <option value="SEK" data-flag="se">SEK</option>
-                    <option value="NZD" data-flag="nz">NZD</option>
                 </select>
                 <p id="resultat" class="total">0</p>
             </div>
         </label>
     </form>
     <script src="front/updateFlagDate.js"></script>
+    <script src="./back/fetchCurrencyCodes.js"></script>
 </body>
 </html>
