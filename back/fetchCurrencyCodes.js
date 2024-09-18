@@ -23,13 +23,13 @@ async function displayCurrencyDropdown() {
     if (Array.isArray(currencyCodes) && currencyCodes.length > 0) {
         currencyCodes.forEach(currency => {
             let option = document.createElement('option')
-            option.textContent = currency
+            option.text = currency
             option.value = currency
             baseCurrencySelector.appendChild(option)
         })
         currencyCodes.forEach(currency => {
             let option = document.createElement('option')
-            option.textContent = currency
+            option.text = currency
             option.value = currency
             convertedCurrencySelector.appendChild(option)
         })
