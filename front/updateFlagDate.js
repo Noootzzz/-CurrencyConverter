@@ -37,10 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
         updateFlag(toSelect, 'to-flag');
     });
 
+
     function updateDate() {
         const now = new Date();
         const dateString = now.toLocaleDateString();
-        document.getElementById('current-date').textContent = `${dateString}`;
+        document.getElementById('current-date').textContent = `Date :${dateString}`;
     }
 
     window.onload = updateDate;

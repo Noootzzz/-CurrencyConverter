@@ -23,8 +23,8 @@
 
 h1{
     text-align: center;
-    margin-top: 30px;
-    font-size: 800%;
+    font-size: 5rem;
+    color: #3576df;
 }
 
 form {
@@ -34,43 +34,43 @@ form {
     justify-content: center;
     max-width: 50vw;
     max-height: 70vh;
-    margin: 50px auto; 
-    background-color: #E4EED2;
-    padding: 25px;
-    border-radius: 100px;
+    margin: 5rem auto; 
+    padding: 5rem 1rem; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 label{
     display: flex;
     flex-direction: column;
     width: 30vw;
-    margin: 80px;
+    margin: 4rem;
     font-size: larger;
-
 }
 
 .menu{
-    display: flex;
+    display: flex;justify-content: center;
     align-items: center;
-    background-color: white;
     height: 20vh;
     border-radius: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
 }
 
-.resultat{
-    display: flex;
-    justify-content: flex-start;
-    width: 30vw;
-}
+
+
 select{
     font-size: 200%;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border: none;
 }
 input{
-    font-size: 180%;
+    font-size: 150%;
     border: none;
+    width: 10rem;
+    padding: 0.5rem;
 }
 input:focus{
     outline: none;
@@ -79,22 +79,25 @@ input:focus::placeholder {
     animation: shrinkPlaceholder 1s forwards;
 }
 .total{
-    font-size: 180%;
+    font-size: 150%;
+    width: 10rem;
+    text-align: center;
 }
 
 select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding: 10px;
-    border: 2px solid #acda57;
+    padding: 1rem;
     border-radius: 5px;
-    background-color: #E4EED2;
-    font-size: 16px;
+    border: 2px solid #00235c;
+    background-color: #3576df;
+    width: 40%;
+    font-size: 1em;
     cursor: pointer;
-    width: 150px;
     transition: border-color 0.3s ease-in-out;
     outline: none;
+    color: white;
 }
 
 select:hover, select:focus {
@@ -105,45 +108,47 @@ select:focus {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-select::after {
-    content: '▼';
-    position: absolute;
-    right: 10px;
-    pointer-events: none;
-}
-
 #from-flag, #to-flag {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
 }
 
+@keyframes changesize {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
 
 #fleche{
     cursor: pointer;
-    font-size: 60px;
+    font-size: 3.5em;
+    padding: 0 1vh;
+    animation: changesize 0.5s infinite alternate;
 }
 
 #fleche:hover{
-    color: #acda57;
-    transition: all 0.3s;
+    color: #3576df;
+    transition: all 0.5s;
 }
 
 .arrow-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-evenly;
+    width: 50%;    
 }
 
 
 
 .multiplicateur {
-    font-size: 40px;
+    font-size: 1.5em;
     background-color: #ffffff;
     border: none;
-    height: 50px;
-    width: 200px;
+    padding: 0.5rem 1rem;
     border-radius: 50px;
     text-align: center;
 }
@@ -151,9 +156,8 @@ select::after {
 
 /*A MODIFIER*/
 .date-container {
-    position: absolute;
-    top: 270px;
-    right: 1575px;
-    font-size: 24px;
-    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
