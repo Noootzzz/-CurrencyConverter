@@ -50,8 +50,11 @@ const updateArrow = document.querySelector('#fleche')
 
 updateArrow.addEventListener('click',() => {
 
+
     updateExchangeRateURL()
     convertCurrency()
+    inputCurrencyValue=0
+
 })
 
 function convertCurrency() {
