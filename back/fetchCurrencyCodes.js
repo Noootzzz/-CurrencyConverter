@@ -1,7 +1,8 @@
 const baseCurrencySelector = document.querySelector('#from')
 const convertedCurrencySelector = document.querySelector('#to')
-//Full URL
-const URL_CURRENCY_CODES = 'https://v6.exchangerate-api.com/v6/7dbbc298278440e39aa48772/codes'
+
+const API_KEY = 'a5b63e062e991e08f20dad74'
+const URL_CURRENCY_CODES = `https://v6.exchangerate-api.com/v6/${API_KEY}/codes`
 
 //Async function to fetch all currency codes
 async function fetchCurrencyCodes() {
@@ -25,12 +26,14 @@ async function displayCurrencyDropdown() {
             let option = document.createElement('option')
             option.text = currency
             option.value = currency
+            option.setAttribute('data-flag', currency.substring(0, 2).toLowerCase()) 
             baseCurrencySelector.appendChild(option)
         })
         currencyCodes.forEach(currency => {
             let option = document.createElement('option')
             option.text = currency
             option.value = currency
+            option.setAttribute('data-flag', currency.substring(0, 2).toLowerCase()) 
             convertedCurrencySelector.appendChild(option)
         })
     } else {
