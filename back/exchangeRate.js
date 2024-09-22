@@ -27,6 +27,7 @@ function updateExchangeRateURL() {
             // Mettre à jour l'affichage du multiplicateur
             exchangeRate.textContent = `x ${exchangeRateValue}`
             
+            convertCurrency()
         } catch (error) {
             console.error(`Error fetching the exchange rate: ${error}`)
         }
@@ -65,4 +66,3 @@ function convertCurrency() {
 }
 
 inputCurrencyValue.addEventListener('input', convertCurrency)
-
