@@ -58,7 +58,10 @@ updateArrow.addEventListener('click',() => {
 })
 
 function convertCurrency() {
-    outputCurrencyValue.textContent = inputCurrencyValue.value * exchangeRateValue
+
+    const convertedValue = (inputCurrencyValue.value * exchangeRateValue).toFixed(2)
+
+    outputCurrencyValue.textContent = convertedValue
 }
 
 inputCurrencyValue.addEventListener('input', convertCurrency)
